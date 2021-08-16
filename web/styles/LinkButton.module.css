@@ -1,0 +1,32 @@
+.container {
+  align-self: flex-start;
+  display: inline-block;
+  border-radius: 30px;
+  border: 5px solid #c586c0;
+  color: #c586c0;
+  font-size: 18px;
+  transition: 0.2s;
+
+  background-size: 210% 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 50%,
+    #c586c0 50%
+  );
+  -webkit-transition: background-position 0.3s;
+  -moz-transition: background-position 0.3s;
+  transition: background-position 0.3s;
+}
+
+.small {
+  padding: 0px 15px;
+}
+
+.normal {
+  padding: 7px 20px 7px 20px;
+}
+
+a.container:hover {
+  background-position: -95% 0;
+  color: #ffffff;
+}

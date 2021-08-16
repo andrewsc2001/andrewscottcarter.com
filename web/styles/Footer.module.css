@@ -1,0 +1,10 @@
+.container {
+  font-size: 18px;
+  background-color: #333333;
+  padding: 50px;
+}
+
+.container a {
+  text-decoration: underline;
+  color: #c586c0;
+}

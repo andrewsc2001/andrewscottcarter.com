@@ -1,0 +1,14 @@
+.blog h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+.categories > * {
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.categories > *:last-child {
+  margin-right: 0px;
+}

@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid #c586c0;
+}
+
+.container div {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
