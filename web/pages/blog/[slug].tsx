@@ -1,7 +1,6 @@
 import BlockContent from "@sanity/block-content-to-react";
 import { GetStaticProps, GetStaticPropsContext } from "next";
 import Head from "next/head";
-import { Post } from "../../../studio/schema";
 import client, { urlFor } from "../../client";
 import AuthorBlock from "../../components/AuthorBlock";
 import Footer from "../../components/Footer";
@@ -80,7 +79,7 @@ export async function getStaticPaths() {
     `);
 
   // Get the paths we want to pre-render based on posts
-  const paths = posts.map((post: Post) => ({
+  const paths = posts.map((post: any) => ({
     params: { slug: post.slug?.current },
   }));
 
