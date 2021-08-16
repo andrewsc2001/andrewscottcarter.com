@@ -42,8 +42,9 @@ export default function Navbar() {
         <button
           className={`${styles.mobileMenuButton}`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="menu"
         >
-          <img src="/menu.svg" />
+          <img src="/menu.svg" alt="menu" />
         </button>
       </nav>
       <ul className={`${styles.mobileMenu} ${mobileMenuOpen ? "" : "hidden"}`}>

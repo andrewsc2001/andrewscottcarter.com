@@ -1,5 +1,6 @@
 import BlockContent from "@sanity/block-content-to-react";
 import { GetStaticProps, GetStaticPropsContext } from "next";
+import Head from "next/head";
 import { Post } from "../../../studio/schema";
 import client, { urlFor } from "../../client";
 import AuthorBlock from "../../components/AuthorBlock";
@@ -14,10 +15,16 @@ export default function BlogPost({
   categories,
   mainImage,
   body,
+  summary,
   publishedAt,
 }: any) {
   return (
     <>
+      <Head>
+        <title>{`${author.name} | ${title}`}</title>
+        <meta name="description" content={summary} />
+        <meta name="author" content={author} />
+      </Head>
       <Navbar />
       <div
         className={styles.mainImage}
@@ -35,8 +42,9 @@ export default function BlogPost({
           ))}
         </div>
         <AuthorBlock
-          imgUrl={urlFor(author.image).url()!}
+          imgUrl={urlFor(author.image).size(100, 100).url()!}
           date={new Date(publishedAt)}
+          name={author.name}
         />
         <BlockContent blocks={body} />
       </article>
@@ -56,6 +64,7 @@ export const getStaticProps: GetStaticProps = async (
       categories[]->,
       body,
       mainImage,
+      summary,
       publishedAt
     }`,
     { slug }

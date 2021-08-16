@@ -1,4 +1,5 @@
 import { GetStaticProps, GetStaticPropsContext } from "next";
+import Head from "next/head";
 import client, { urlFor } from "../client";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -19,13 +20,21 @@ type MochiProps = {
 export default function Mochi({ photos }: MochiProps) {
   return (
     <>
+      <Head>
+        <title>Andrew Carter | Mochi</title>
+        <meta name="description" content="Pictures of my cat, Mochi" />
+        <meta name="author" content="Andrew Carter" />
+      </Head>
       <Navbar />
       <section className={styles.catphotos}>
         <h1>Mochi</h1>
         <div className={styles.gallery}>
           {photos.map((photo) => (
             <div>
-              <img src={urlFor(photo.image).width(500).url()!} />
+              <img
+                src={urlFor(photo.image).width(500).url()!}
+                alt={photo.description}
+              />
               <p>{photo.description}</p>
             </div>
           ))}

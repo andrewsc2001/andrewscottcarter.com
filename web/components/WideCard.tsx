@@ -24,7 +24,7 @@ export default function WideCard({
       </div>
       <div className={styles.content}>
         <a href={href}>
-          <h3>{title}</h3>
+          <h2>{title}</h2>
         </a>
         {children}
       </div>

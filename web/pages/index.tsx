@@ -36,6 +36,11 @@ export default function Home({ author, jobs }: HomeProps) {
     <>
       <Head>
         <title>Andrew Carter</title>
+        <meta
+          name="description"
+          content="Andrew Carter, Software Engineer | Full Stack Developer"
+        />
+        <meta name="author" content="Andrew Carter" />
       </Head>
       <Navbar />
       <section className={styles.hero}>
@@ -57,7 +62,7 @@ export default function Home({ author, jobs }: HomeProps) {
       </section>
 
       <section className={styles.work}>
-        <h2 className="pale-yellow">Work History</h2>
+        <h1 className="pale-yellow">Work History</h1>
         {jobs.map((job) => (
           <WideCard
             imgUrl={urlFor(job.image).width(200).url()!}

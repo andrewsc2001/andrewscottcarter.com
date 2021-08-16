@@ -37,6 +37,11 @@ export default function BlogHome({ posts }: BlogHomeProps) {
     <>
       <Head>
         <title>Andrew Carter | Blog</title>
+        <meta
+          name="description"
+          content="Andrew Carter's Software Development Blog, where I document my journies down coding rabbit holes"
+        />
+        <meta name="author" content="Andrew Carter" />
       </Head>
       <Navbar />
       <section className={styles.blog}>
@@ -45,6 +50,7 @@ export default function BlogHome({ posts }: BlogHomeProps) {
           <WideCard
             href={`/blog/${post.slug.current}`}
             imgUrl={urlFor(post.thumbnail).width(200).url()!}
+            alt={post.title}
             title={post.title}
           >
             <p>
