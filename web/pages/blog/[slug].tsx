@@ -1,10 +1,11 @@
 import BlockContent from "@sanity/block-content-to-react";
 import { GetStaticProps, GetStaticPropsContext } from "next";
 import Head from "next/head";
+import React from "react";
 import client, { urlFor } from "../../client";
 import AuthorBlock from "../../components/AuthorBlock";
 import Footer from "../../components/Footer";
-import { NextLinkButton } from "../../components/LinkButton";
+import LinkButton, { NextLinkButton } from "../../components/LinkButton";
 import Navbar from "../../components/Navbar";
 import styles from "../../styles/BlogPost.module.css";
 
@@ -40,12 +41,27 @@ export default function BlogPost({
             </NextLinkButton>
           ))}
         </div>
-        <AuthorBlock
-          imgUrl={urlFor(author.image).size(100, 100).url()!}
-          date={new Date(publishedAt)}
-          name={author.name}
-        />
+        <AuthorBlock imgUrl={urlFor(author.image).size(100, 100).url()!}>
+          <h2 className="teal">{author.name}</h2>
+          <p>
+            {new Date(publishedAt).toLocaleString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </p>
+        </AuthorBlock>
         <BlockContent blocks={body} />
+
+        <AuthorBlock imgUrl={urlFor(author.image).size(100, 100).url()!}>
+          <h2 className="teal">{author.name}</h2>
+          <p style={{ paddingBottom: "10px" }}>
+            Software Engineer | Full Stack Developer
+          </p>
+          <LinkButton small href="mailto:andrew@andrewscottcarter.com">
+            Email me!
+          </LinkButton>
+        </AuthorBlock>
       </article>
       <Footer />
     </>
