@@ -16,7 +16,7 @@ export default function Navbar() {
             <a href="https://github.com/andrewsc2001">
               <img alt="github" src="/github.svg" />
             </a>
-            <a href="mailto:technorover@gmail.com">
+            <a href="mailto:andrews@andrewscottcarter.com">
               {" "}
               {/* Change to work address */}
               <img alt="mail" src="/mail.svg" />
