@@ -30,7 +30,7 @@ export default function Mochi({ photos }: MochiProps) {
         <h1>Mochi</h1>
         <div className={styles.gallery}>
           {photos.map((photo) => (
-            <div>
+            <div key={photo.name}>
               <img
                 src={urlFor(photo.image).width(500).url()!}
                 alt={photo.description}

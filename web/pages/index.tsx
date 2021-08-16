@@ -53,7 +53,7 @@ export default function Home({ author, jobs }: HomeProps) {
           <p>Software Engineer | Full Stack Developer</p>
           <p>BS Computer Science, University of Texas at Dallas, 2023</p>
           <div className={styles.heroButtons}>
-            <LinkButton href="mailto:technorover@gmail.com">
+            <LinkButton href="mailto:andrew@andrewscottcarter.com">
               Email me!
             </LinkButton>
             <LinkButton href="mailto:technorover@gmail.com">Resume</LinkButton>
