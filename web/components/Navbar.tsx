@@ -1,4 +1,3 @@
-import { GetStaticProps, GetStaticPropsContext } from "next";
 import Link from "next/link";
 import { useState } from "react";
 import styles from "../styles/Navbar.module.css";
@@ -52,7 +51,7 @@ export default function Navbar() {
           <a href="https://github.com/andrewsc2001">
             <img alt="github" src="/github.svg" />
           </a>
-          <a href="mailto:technorover@gmail.com">
+          <a href="mailto:andrews@andrewscottcarter.com">
             {" "}
             {/* Change to work address */}
             <img alt="mail" src="/mail.svg" />
