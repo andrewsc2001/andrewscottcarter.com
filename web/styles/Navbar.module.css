@@ -24,6 +24,11 @@
 .right a {
   padding-right: 20px;
 }
+
+.right a:last-child {
+  padding-right: 0px;
+}
+
 .container a {
   display: flex;
   align-items: center;

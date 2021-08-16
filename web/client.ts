@@ -6,7 +6,7 @@ const client = sanityClient({
   projectId: "m18rufg9", // you can find this in sanity.json
   dataset: "production", // or the name you chose in step 1
   apiVersion: "2021-03-25",
-  useCdn: false, // `false` if you want to ensure fresh data
+  useCdn: true, // `false` if you want to ensure fresh data
 });
 
 // Get a pre-configured url-builder from your sanity client
