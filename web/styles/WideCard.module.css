@@ -28,7 +28,7 @@
 
 .imageWrapper {
   display: flex;
-  flex: 1;
+  flex: 0;
   align-items: center;
   justify-content: center;
 

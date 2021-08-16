@@ -10,6 +10,7 @@ import category from "./category";
 import post from "./post";
 import author from "./author";
 import catPhoto from "./catPhoto";
+import job from "./job";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -28,5 +29,6 @@ export default createSchema({
     blockContent,
 
     catPhoto,
+    job,
   ]),
 });
